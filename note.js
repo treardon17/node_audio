@@ -5,6 +5,7 @@ class Note {
   constructor(frequency) {
     this.speaker = Speaker()
     this.frequency = frequency
+    this.frequencyBase = frequency
   }
 
   play() {
@@ -25,6 +26,10 @@ class Note {
 
   changeFrequency(frequency) {
     this.frequency = frequency
+  }
+
+  shiftFrequency(offset) {
+    this.frequency = this.frequencyBase + offset
   }
 }
 
